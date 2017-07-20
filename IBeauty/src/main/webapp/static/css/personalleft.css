@@ -1,0 +1,51 @@
+a{
+    text-decoration:none;   
+}
+    a:link {color: #333}/* 未访问的链接 */
+    a:visited{color:#333}/* 已访问的链接 */
+    a:hover {color:#F24B3B}/* 鼠标移动到链接上 */
+    a:active {color: #0000FF}/* 选定的链接 */
+.name{
+		color:#E96A5F;
+	}
+   
+    .com_left{
+        /*border:1px solid #000;*/
+        width: 220px;
+        float: left;
+        padding-top: 10px;
+      
+
+    }
+    .slider {
+    background: #fff;
+    border: 1px solid #f3f3f3;
+    margin-bottom: 10px;
+    }
+    .header_slider {
+    padding-bottom: 10px;
+    position: relative;
+    float: left;
+    }
+    .slider {
+    background: #fff;
+    border: 1px solid #f3f3f3;
+    margin-bottom: 10px;
+    }
+   
+    .slider_hd{ 
+        width:200px;
+        text-align:center;
+        margin-top: 10px;
+
+        
+    }
+    .header_slider{
+        width:200px;
+        text-align:center;
+    }
+    .header_box img{
+	vertical-align: middle;
+	 border-radius: 60px;
+
+}

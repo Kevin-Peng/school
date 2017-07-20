@@ -1,0 +1,42 @@
+.com_right {
+	width:1000px;
+	height:400px;
+	margin-left:300px;
+}
+
+.pwd{
+	float:left;
+	margin-top:50px;
+}
+
+input{
+	padding: 7px 5px;
+    line-height: 36px;
+    font-size:15px;
+    color: #333;
+    border: solid 1px #e9e9e9;
+    transition: border .2s,box-shadow .2s;
+    background: #fff;
+}
+
+.submit-btn{
+	display: inline-block;
+    cursor: pointer;
+    width: 235px;
+    height: 36px;
+    line-height: 36px;
+    font-size: 20px;
+    margin-right: 35px;
+    overflow: visible;
+    text-align: center;
+    padding: 0;
+    padding: 0 10px;
+    background: #27c8e8;
+    border-radius: 3px;
+    color: #fff;
+    border: none;
+    margin-top: 10px;
+    position: relative;
+    left: 15px;
+    top: 15px;
+}

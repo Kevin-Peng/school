@@ -1,0 +1,186 @@
+ .common_wrapper, .wrap {
+    width: 1186px;
+    margin: 0 auto;
+    }
+.com_right {
+    float: right;
+    width: 942px;
+    min-height: 300px;
+}
+.crumb {
+    color: #737d8c;
+    font-size: 14px;
+    margin: 0 0 10px;
+    padding-top: 15px;
+    height: 20px;
+}
+.crumb li {
+    float: left;
+    line-height: 20px;
+}
+.crumb .home a {
+    display: block;
+    float: left;
+    background: url(../img/icon01.png) no-repeat -88px 0;
+    height: 16px;
+    width: 16px;
+}
+.crumb li a {
+    display: block;
+    color: #4a4439;
+    font-weight: normal;
+}
+.address_manage {
+    margin-top: 22px;
+}
+.address_manage .personal_account, .n_acc_right .r_content {
+    background: #fff !important;
+    border: solid 1px #f3f3f3 !important;
+}
+.personal_account, .account_bd {
+    position: relative;
+}
+.address_manage .title_bar {
+    color: #4a4439;
+    line-height: 45px;
+    height: 45px;
+    border-bottom: 2px solid #d8d8d8;
+    margin: 0 22px;
+}
+.address_manage .title_bar h2 {
+    float: left;
+    font-size: 16px;
+    font-weight: normal;
+    overflow: hidden;
+    line-height: 45px;
+}
+.commodity_consult {
+    padding: 28px 25px 0 25px;
+    overflow: hidden;
+}
+.commodity_consult .tab_nav, .tabs {
+    line-height: 40px;
+    height: 40px;
+    overflow: hidden;
+    background: #f6f6f6 !important;
+}
+.commodity_consult .tab_nav ul li {
+    float: left;
+    width: auto;
+}
+.commodity_consult .tab_nav ul li.current a, .product_comment .tabs li.current {
+    color: #d91966 !important;
+    background: none;
+}
+
+.commodity_consult .tab_nav ul li a, .product_comment .tabs li {
+    display: inline-block;
+    color: #666;
+    font-size: 14px;
+    font-weight: 700;
+    margin-left: -1px;
+    padding: 0 30px;
+    height: 40px;
+    text-align: center;
+    overflow: hidden;
+}
+.uc_order .list {
+    margin-top: 6px;
+    padding: 0 0 10px;
+    min-height: 60px;
+    _height: 60px;
+    _overflow: visible;
+}
+.uc_order .list table {
+    width: 100%;
+}
+thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+.uc_order .list .s1 {
+    width: 200px;
+}
+.uc_order .list .s2 {
+    width: 50px;
+}
+.uc_order .list .s3 {
+    width: 40px;
+}
+.uc_order .list .s4 {
+    width: 60px;
+}
+.uc_order .list .s5 {
+    width: 60px;
+}
+.uc_order .list .s6 {
+    width: 60px;
+}
+.uc_order .list .s7 {
+    width: 70px;
+}
+.uc_order .list table th {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 38px;
+    color: #999999;
+    font-weight: bold;
+}
+.uc_order .list table th {
+    border-bottom: 1px solid #f3f3f3;
+    padding: 0 5px;
+}
+.nodata {
+    height: 115px;
+    background: url("../img/tishi.png") no-repeat center 0;
+    text-align: center;
+    padding-top: 110px;
+}
+.nodata p {
+    line-height: 23px;
+    width: 140px;
+    margin: 0 auto;
+    padding: 0;
+    display: block;
+}
+.c1{
+	width:40px;
+}
+.c2{
+	width:30px;
+}
+.c3{
+	width:100px;
+}
+.c4{
+	width:100px;
+}
+.c5{
+	width:100px;
+	text-align:center;
+	
+}
+.c6{
+	width:90px;
+	text-align:center;
+}
+.c7{
+	width:90px;
+}
+.c8{
+	width:90px;
+	text-align:center;
+}
+.c9{
+	width:90px;
+}
+.main-table table{
+	margin-left:-10px;
+}

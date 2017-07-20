@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--命名空间应该是对应接口的包名+接口名 -->
+<mapper namespace="cn.IBeauty.dao.collectDAO">  
+    <select id="findAddressById" resultType="cn.IBeauty.po.Receive_address" parameterType="int">
+        select * from receive_address where id=#{productId}
+    </select>
+    <select id="findProductById" resultType="cn.IBeauty.po.Product" parameterType="int">
+        select * from product where id=#{productId}
+    </select>
+    <select id="findCollect" resultType="cn.IBeauty.po.Collect">
+       select * from collect where userId=#{userId}
+    </select>
+    <insert id="insertCollect">
+        insert into collect(collect.pid,collect.ppic,collect.pname,collect.pprice,collect.pnumber,collect.userId) 
+        values(#{pid},#{ppic},#{pname},#{pprice},#{pnumber},#{userId})
+    </insert> 
+    <delete id="nocollect">
+    	delete from collect where pid=#{pid} and userId=#{userId}
+    </delete> 
+    <insert id="collecttocart">
+        insert into shoppingcart(shoppingcart.productId,shoppingcart.userId,shoppingcart.productPrice,shoppingcart.productImg,shoppingcart.productNum,shoppingcart.productCount,shoppingcart.productName) 
+        values(#{pid},#{userId},#{productPrice},#{productImg},#{productNum},#{productCount},#{productName})
+    </insert>
+</mapper>

@@ -1,0 +1,40 @@
+@CHARSET "UTF-8";
+.com_right {
+    float: right;
+    width: 942px;
+    height: 600px;
+}
+.com_left {
+    width: 200px;
+    height: 600px;
+}
+.main-table{
+	height: 500px;
+}
+#row1{
+	color:#d91966;
+	font-weight:bold;
+}
+.row11{
+	font-weight:bold;
+}
+.c1 {
+	margin-left:0px;
+	padding-left:0px;
+    width: 130px;
+    text-align: center;
+    font-weight:bold;
+}
+.c1 img{
+	width: 130px;
+	height:100px;
+}
+.c2 {
+    width: 250px;
+    text-align: center;
+}
+.c3 {
+    width: 400px;
+    text-align: center;
+    padding-left:10px;
+}

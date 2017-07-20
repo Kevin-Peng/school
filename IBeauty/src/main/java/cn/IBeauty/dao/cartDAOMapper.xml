@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--命名空间应该是对应接口的包名+接口名 -->
+<mapper namespace="cn.IBeauty.dao.cartDAO">
+	<!--id应该是接口中的方法，结果类型如没有配置别名则应该使用全名称 -->
+	<!--获得图书对象通过编号 -->
+	<!-- 刷新购物车 -->
+	<select id="refresh" resultType="cn.IBeauty.po.Cart">
+		select * from shoppingCart where
+		userId=#{userId}
+	</select>
+
+	<insert id="addShoppringCart" parameterType="java.util.Map">
+		INSERT INTO
+		shoppingcart(productId,userId,productPrice,productImg,productNum,productCount,productName)
+		VALUES
+		(#{productId},#{userId},#{productPrice},#{productImg},#{productNum},#{productCount},#{productName})
+	</insert>
+
+	<select id="ifexitsShoppingCart" resultType="java.lang.Integer"
+		parameterType="java.util.Map">
+		SELECT COUNT(*) FROM shoppingcart WHERE userId=#{userId} AND
+		productId=#{productId}
+	</select>
+
+	<select id="getShoppingCartId" resultType="java.lang.Integer"
+		parameterType="java.util.Map">
+		SELECT id FROM shoppingcart WHERE userId=#{userId} AND
+		productId=#{productId}
+	</select>
+	<update id="updateShoppingCartNum" parameterType="java.lang.Integer">
+		UPDATE
+		shoppingcart SET
+		productNum=productNum+1,productCount=productCount+productPrice WHERE
+		id=#{id}
+	</update>
+
+
+	<!-- 删除 -->
+	<delete id="delete">
+		delete from shoppingCart where productId=#{productId}
+		and userId=#{userId}
+	</delete>
+	<!-- 修改 -->
+	<update id="change">
+		update shoppingCart set
+		productNum=#{productNum},productCount=#{productCount} where
+		productId=#{productId} and userId=#{userId}
+	</update>
+	<select id="topay" resultType="cn.IBeauty.po.Cart">
+		select * from shoppingCart where
+		productId=#{topayId} and userId=#{userId}
+	</select>
+	<select id="cartcollect" resultType="cn.IBeauty.po.Collect">
+		select * from collect where
+		pid=#{productId} and userId=#{userId}
+	</select>
+</mapper>
+

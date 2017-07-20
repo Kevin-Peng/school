@@ -1,0 +1,60 @@
+body {    
+    color: #393939;
+    font-family: "Myriad Pro",Arial,FZLanTingHei-R-GBK,"方正兰亭黑","Microsoft YaHei","微软雅黑",STHeiti,"华文黑体",SimSun,"宋体",sans-serif;
+    }
+.head{
+    	height: 250px;
+    }
+.common_wrapper, .wrap {
+    width: 1186px;
+    margin: 0 auto;
+    }
+.com_left{
+	width: 200px;
+	height:400px;
+
+}
+.com_right{
+	width:1200px;
+	height:580px;
+	font-size:18px;	
+}
+    .c3{
+        width:100px;
+        text-align:center ;
+    }
+    .c4{
+        width:600px;
+        text-align:center ;
+    }
+
+    .c5{
+        width:200px;
+    }
+    .c8{
+        width: 100px;
+        text-align: right;
+    }
+a:link {color: #333}/* 未访问的链接 */
+    a:visited{color:#333}/* 已访问的链接 */
+    a:hover {color:#F24B3B}/* 鼠标移动到链接上 */
+    a:active {color: #0000FF}/* 选定的链接 */
+a{
+    text-decoration:none;   
+}
+
+.dtable table{
+    border-style:none;
+    font-family:Serif; 
+   	font-size:18px;
+}
+.dtable #row1{
+    font-weight: bold;
+    height:50px;
+    border-style:none;
+    background-color:#EEEEEE;
+}
+.dtable #row1 td{
+    border-collapse: collapse;
+    border-spacing: 0px;
+}

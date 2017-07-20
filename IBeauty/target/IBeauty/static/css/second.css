@@ -1,0 +1,151 @@
+#out{
+    
+}
+
+#mainn{
+    margin-bottom: 30px;
+    margin-top: 15px;
+    width: 1200px;
+}
+
+#box21{
+    font:12px/1.5 "\5FAE\8F6F\96C5\9ED1",Arial,HELVETICA;
+    font-size: 14px;
+    background: #f5f5f5;
+    height: 35px;
+    line-height: 35px;
+    font-size: 14px;
+    border-bottom: 1px solid #fff;
+}
+
+.box22{
+    font-size: 12px;
+    background: #f5f5f5;
+    padding: 15px 10px;
+    overflow: hidden;;
+    font-weight: bold;
+    vertical-align: center;
+    width: 70px;
+    text-align: left;
+    font-style: normal;
+    border: 5px;
+}
+
+.box23{
+    background: #fff;
+    padding: 10px;
+    border-bottom: 1px solid #f5f5f5;
+    display: table-cell;
+    border-spacing: 0;
+    font-family: "楷体";
+}
+
+.box24 li{
+    float: left; 
+    list-style: none;
+    padding: 0 10px;
+    margin: 5px;
+    height: 25px;
+}
+
+.box24 a{
+    text-decoration: none;
+    display: inline-block;
+}
+
+.box24 a:link {color: #333}/* 未访问的链接 */
+.box24 a:visited{color:#333}/* 已访问的链接 */
+.box24 a:hover {color: pink}/* 鼠标移动到链接上 */
+.box24 a:active {color: #0000FF}/* 选定的链接 */
+
+#box25{
+    color: #d91864;
+    border: 1px solid pink;
+}
+
+#box31{
+    border: 1px solid yellow;
+    margin-top: 5px;
+    padding-bottom: 1px;
+    padding-top: 1px;
+    font-size: 16px;
+    background: #fffae2;
+    color: #090a0e;
+    margin-bottom: 15px;
+    font-family: "楷体";
+}
+
+.box3{
+    background: #f5f5f5;
+    line-height: 16px;
+    padding-top: 8px;
+    padding-bottom: 5px; 
+    height: 35px;
+    margin-bottom: 50px;
+    font-weight: bold;
+}
+
+.box3 li{
+    float: left; 
+    list-style: none;
+    padding: 0 10px;
+    margin: 5px;
+    height: 25px;
+}
+
+.box3 a{
+    text-decoration: none;   
+}
+
+.box3 a:link {color: #333}/* 未访问的链接 */
+.box3 a:visited{color:#333}/* 已访问的链接 */
+.box3 a:hover {color: pink}/* 鼠标移动到链接上 */
+.box3 a:active {color: #0000FF}/* 选定的链接 */
+
+.shangpin{
+    padding:20px;
+}
+
+.tongyong{
+    
+}
+.tongyong li{ 
+    list-style: none;
+}
+
+.tongyong a{
+    display: inline-block;
+    text-decoration: none;
+}
+
+
+
+.shangpinjieshao{
+    width: 240px;
+    text-align: left;
+    font-size: 12px;
+    color: #949494;
+}
+
+.shangpinjieshao a:link {color: #949494}/* 未访问的链接 */
+.shangpinjieshao a:visited{color:#949494}/* 已访问的链接 */
+.shangpinjieshao a:hover {color: pink}/* 鼠标移动到链接上 */
+.shangpinjieshao a:active {color: #0000FF}/* 选定的链接 */
+
+.jiage{
+    font-size: 23px;
+    padding:15px;
+    color: #ff5a5f;
+    font-weight: bold;
+}
+
+
+#duibijia{
+    padding:5px;
+    padding-bottom: 55px;
+}
+
+.fudong{
+    float: left;
+}
+

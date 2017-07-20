@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.IBeauty.dao.ProductDAO">
+
+	<select id="findAll" resultType="cn.IBeauty.po.Product">
+		select * from product
+	</select>
+
+	<select id="findProductByfirstId" resultType="cn.IBeauty.po.Product">
+		SELECT product.*
+		from first_category fc
+		JOIN second_category sc
+		JOIN category_product cp
+		JOIN product
+		where fc.id=sc.cat_first_id and sc.id=cp.cat_second_id and
+		product.id=cp.product_id and fc.id=#{id}
+	</select>
+
+	<select id="GroupBybrand" resultType="cn.IBeauty.po.Product">
+		SELECT
+		product.product_brand
+		from first_category fc
+		JOIN second_category sc
+		JOIN category_product cp
+		JOIN product
+		where fc.id=sc.cat_first_id and
+		sc.id=cp.cat_second_id and
+		product.id=cp.product_id and fc.id=#{id}
+		GROUP BY product_brand
+	</select>
+
+	<select id="GroupByConditionn" resultType="cn.IBeauty.po.Product">
+		SELECT
+		product.conditionn
+		from first_category fc
+		JOIN second_category sc
+		JOIN
+		category_product cp
+		JOIN product
+		where fc.id=sc.cat_first_id and
+		sc.id=cp.cat_second_id and
+		product.id=cp.product_id and fc.id=#{id}
+		GROUP BY product.conditionn
+	</select>
+
+
+	<select id="findProductBysecondId" resultType="cn.IBeauty.po.Product">
+		SELECT product.*
+		from second_category sc
+		JOIN category_product cp
+		JOIN product
+		where
+		sc.id=cp.cat_second_id and product.id=cp.product_id and
+		sc.id=#{secondid}
+	</select>
+
+	<select id="findProductById" resultType="cn.IBeauty.po.Product"
+		parameterType="int">
+		select * from product where id=#{productId}
+	</select>
+
+	<select id="findProductBytexture" resultType="cn.IBeauty.po.Product">
+		select * from
+		product where texture=#{texture}
+	</select>
+
+	<select id="listProduct" resultType="cn.IBeauty.po.Product">
+		select * from product where
+		product_brand=#{brand}
+	</select>
+
+	<select id="Search" resultType="cn.IBeauty.po.Product">
+		select * from product where
+		product_brand like
+		CONCAT('%',#{keyword},'%' )
+		or alt like CONCAT('%',#{keyword},'%')
+		or product_name like
+		CONCAT('%',#{keyword},'%')
+		or detail like CONCAT('%',#{keyword},'%')
+		or
+		conditionn like CONCAT('%',#{keyword},'%')
+		or texture like
+		CONCAT('%',#{keyword},'%')
+	</select>
+
+	<select id="GroupBybrand_Search" resultType="cn.IBeauty.po.Product">
+		select
+		product.product_brand
+		from product where product_brand like
+		CONCAT('%',#{keyword},'%' )
+		or alt like CONCAT('%',#{keyword},'%')
+		or product_name like
+		CONCAT('%',#{keyword},'%')
+		or detail like CONCAT('%',#{keyword},'%')
+		or
+		conditionn like CONCAT('%',#{keyword},'%')
+		or texture like
+		CONCAT('%',#{keyword},'%')
+		GROUP BY product.product_brand
+	</select>
+
+	<select id="GroupByConditionn_Search" resultType="cn.IBeauty.po.Product">
+		select
+		product.conditionn
+		from product where product_brand like
+		CONCAT('%',#{keyword},'%' )
+		or alt like CONCAT('%',#{keyword},'%')
+		or product_name like
+		CONCAT('%',#{keyword},'%')
+		or detail like CONCAT('%',#{keyword},'%')
+		or
+		conditionn like CONCAT('%',#{keyword},'%')
+		or texture like
+		CONCAT('%',#{keyword},'%')
+		GROUP BY product.conditionn
+	</select>
+
+	<select id="listgongxiao" resultType="cn.IBeauty.po.Product">
+		select * from product where
+		product_brand=#{brand}
+	</select>
+
+
+	<select id="listcondition" resultType="cn.IBeauty.po.Product">
+		select * from product
+		where conditionn=#{conditionn}
+	</select>
+
+	<select id="listcal" resultType="cn.IBeauty.po.Product">
+		select * from product where
+		product_brand=#{0} and conditionn=#{1}
+	</select>
+
+	<select id="listDetail" resultType="cn.IBeauty.po.Product">
+		select * from product where
+		id=#{productId}
+	</select>
+
+	<select id="changeprice" resultType="cn.IBeauty.po.Product">
+		select * from product where
+		price &gt; #{0} and price &lt; #{1}
+	</select>
+	
+	<select id="groundtime" resultType="cn.IBeauty.po.Product">
+    	select * from product where categoryy=#{categoryy} order by add_time DESC
+    </select>  
+
+	<select id="queryProductDetailById" resultType="cn.IBeauty.po.Product"
+		parameterType="java.lang.Integer">
+		select * from product where id=#{productId}
+	</select>
+	<select id="findProduct" resultType="cn.IBeauty.po.Product">
+        select * from product
+    </select>
+    <select id="SameBrandProduct" resultType="cn.IBeauty.po.Product">
+		SELECT * FROM product where product_brand=#{productBrand} LIMIT 1
+	</select>
+	<select id="SameProduct" resultType="cn.IBeauty.po.Product">
+		SELECT * FROM product where texture=#{texture} LIMIT 1
+	</select>
+    
+    <!-- 增加 -->
+    <insert id="insert" parameterType="cn.IBeauty.po.Product">
+        insert into product(id, product_brand,product_name,detail,volum,product_country,guarantee,add_time,
+       		 product_num,conditionn,texture,fixed_price,price,color)
+        values(#{id}, #{product_brand},#{product_name},#{detail},#{volum},#{product_country},#{guarantee},#{add_time},
+       		 #{product_num},#{conditionn},#{texture},#{fixed_price},#{price},#{color})
+    </insert>
+    
+    <!-- 删除 -->
+    <delete id="delete" parameterType="int">
+        delete from product where id=#{id}
+    </delete>
+    
+    <!-- 更新 -->
+    <update id="update">
+        update product 
+        set id=#{id},
+        product_brand=#{product_brand},product_name=#{product_name},detail=#{detail},volum=#{volum},
+        product_country=#{product_country},guarantee=#{guarantee},add_time=#{add_time},product_num=#{product_num},conditionn=#{conditionn},
+        texture=#{texture},fixed_price=#{fixed_price},price=#{price},color=#{color}
+        where id=#{id}
+    </update>
+    
+    <!-- 查找 -->
+    <select id="findById"  resultType="cn.IBeauty.po.Product">
+    	select * from product where id=#{id}    
+    </select>
+    
+    <select id="dgroundtime" resultType="cn.IBeauty.po.Product">
+    	select * from product where categoryy=#{categoryy} order by add_time ASC
+    </select>  
+</mapper>

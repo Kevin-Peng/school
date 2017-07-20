@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.IBeauty.dao.AddressDAO">
+    <select id="getAddressList" resultType="cn.IBeauty.po.Receive_address" parameterType="java.lang.Integer">
+        select * from receive_address where user_id=#{userId}
+    </select>
+    <insert id="addAddress" parameterType="cn.IBeauty.po.Receive_address">
+        insert into receive_address(user_id,receive_name,full_address,postal_code,mobile,flag)
+        VALUES (#{user_id},#{receive_name},#{full_address},#{postal_code},#{mobile},#{flag})
+
+    </insert>
+   <update id="updateAddress" parameterType="cn.IBeauty.po.Receive_address">
+       update receive_address set receive_name=#{receive_name},
+       full_address=#{full_address},postal_code=#{postal_code},mobile=#{mobile}
+       where id=#{id}
+   </update>
+    <delete id="deleteAddress" parameterType="java.lang.Integer">
+        delete from receive_address where id=#{id}
+    </delete>
+    <select id="quereyAddressDetail" parameterType="java.lang.Integer" resultType="cn.IBeauty.po.Receive_address">
+     select * from receive_address where id=#{id}
+    </select>
+    <update id="setDefault" parameterType="java.lang.Integer">
+        UPDATE  receive_address set flag=1 where id=#{id}
+    </update>
+
+</mapper>
+

@@ -1,0 +1,25 @@
+.slider{
+	margin:0px 0px 0px 0px;
+}
+.bask_reply .pro_consult .title{
+	margin:5px 0px 0px 0px;
+}
+#footinfo {
+    bottom: 20px;
+    margin: 50px 0px -90px 0px;
+    display: inline-block;
+    padding-left: 0;
+    float: left;
+    width: 100%;
+    text-align: center;
+    height: 200px;
+}
+.com_left {
+    float: left;
+    width: 220px;
+    height:500px;
+    padding-top: 10px;
+}
+.baskinfo_bar{
+	height:300px;
+}

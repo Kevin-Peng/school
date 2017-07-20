@@ -1,0 +1,400 @@
+a{
+	text-decoration:none;
+	color:#372718
+}
+a:hover {
+	text-decoration:none;
+	color:#d91966
+}
+.main{
+	position: absolute;
+	width: 1899px;
+}
+
+body {
+	font: 12px/1.5 "\5FAE\8F6F\96C5\9ED1",Arial,HELVETICA;
+	min-width: 1200px;
+	background: #fff;
+	_background-image: url(about:blank);
+	_background-attachment: fixed;
+}
+
+
+.header{
+	position: relative;
+	height: 100px;
+	width: 100%;
+	margin: 0px 0px 5px 0px;
+}
+.topNav {
+	position: relative;
+	width: 100%;
+	font-size: 14px;
+	color: #000;
+	height: 44px;
+	line-height: 44px;
+	background: #000;
+	box-shadow: 0 2px 2px rgba(0,0,0,0.5);
+	float: left;
+}
+.topNav ul {
+	width: 1188px;
+	margin: 0 auto;
+	position: relative
+}
+
+.topNav ul li {
+	float: left;
+	list-style-type: none;
+}
+.topNav>ul>li>.L1 {
+	position: relative
+}
+.topNav>ul>li>.L1>a {
+	color: #fff;
+	width: 125px;
+	text-align: center;
+	display: block
+}
+.topNav>ul a:hover {
+	color: #ea1c50
+}
+.topNav ul li.liHover>.L1 {
+	color: #fff;
+	background: #ea1c50
+}
+.navDelay .liAll {
+	background: #ea1c50
+}
+.topNav .L2 {
+	display: none;
+	width: 1188px;
+	box-sizing: border-box;
+	background: #fff;
+	position: absolute;
+	border-style: solid;
+	border-color: #ea1c50;
+	border-width: 4px 1px 1px 1px;
+	left: 0;
+	padding: 20px 0;
+	z-index: 9998
+}
+
+.topNav .L2 .sort {
+	display: block;
+	width: 157px;
+	float: left;
+	margin-left: 40px;
+	border-right: 1px solid #eee;
+	overflow: hidden
+}
+.topNav .L2 .sortLast {
+	width: 194px;
+	float: left;
+	text-align: center
+}
+
+.topNav .L2 .sort h4 {
+	line-height: 32px;
+	height: 32px;
+	font-size: 16px
+}
+
+.topNav .L2 .sort h4.part {
+	margin-top: 12px
+}
+
+.topNav .L2 .sort p {
+	line-height: 28px;
+	height: 28px
+}
+.topNav .L2 .sort .hotimg {
+	width: 194px;
+	height: 178px;
+	text-align: center;
+	overflow: hidden;
+	float: left
+}
+
+.topNav .L2 .sort img {
+	width: 182px;
+	height: 178px
+}
+.topNav .L2 .sort-man img,.topNav .liGift .sort img,.topNav .L2 .sort-man .hotimg,.topNav .liGift .sort .hotimg {
+	height: 365px
+}
+
+.topNav .L2 .sort-man {
+	margin-left: 0px;
+	width: 194px
+}
+.topNav ul li.liHover .L2 {
+	display: block
+}
+
+.topNav ul li:not(.liHome):not(.liPost):not(.liVideo).liHover .L1:before {
+	content: "";
+	position: absolute;
+	color: #fff;
+	bottom: -4px;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+	border-bottom: 8px solid #fff;
+	margin-left: -8px;
+	z-index: 9999
+}
+
+.topNav .L2 {
+	display: none;
+	width: 1188px;
+	box-sizing: border-box;
+	background: #fff;
+	position: absolute;
+	border-style: solid;
+	border-color: #ea1c50;
+	border-width: 4px 1px 1px 1px;
+	left: 0;
+	padding: 20px 0;
+	z-index: 9998
+}
+
+.topNav .L2 .sort {
+	display: block;
+	width: 157px;
+	float: left;
+	margin-left: 40px;
+	border-right: 1px solid #eee;
+	overflow: hidden
+}
+
+.topNav .L3 .sort {
+	display: block;
+	width: 215px;
+	margin-left: 30px
+}
+
+.topNav .L2 .sortLast {
+	width: 194px;
+	float: left;
+	text-align: center
+}
+
+.topNav .L2 .sort h4 {
+	line-height: 32px;
+	height: 32px;
+	font-size: 16px
+}
+
+.topNav .L2 .sort h4.part {
+	margin-top: 12px
+}
+
+.topNav .L2 .sort p {
+	line-height: 28px;
+	height: 28px
+}
+
+.topNav .L3 .sort p {
+	line-height: 24px;
+	height: auto;
+	margin: 7px 0
+}
+
+.topNav .L2 .sort .hotimg {
+	width: 194px;
+	height: 178px;
+	text-align: center;
+	overflow: hidden;
+	float: left
+}
+
+.topNav .L2 .sort img {
+	width: 182px;
+	height: 178px
+}
+
+.topNav .liAll .L2 {
+	padding: 20px 0px 25px 0px
+}
+
+.topNav .L3 h4 {
+	font-size: 25px !important
+}
+
+.topNav .L3 .col {
+	padding: 4px 12px;
+	margin: 0 6px 0 0px;
+	cursor: pointer
+}
+
+.topNav .L3 .col.sign {
+	color: #fff;
+	background: #ea1c50
+}
+
+.topNav .L3 .col:hover {
+	color: #fff;
+	background: #ea1c50
+}
+
+.topNav .L3 .brandAll {
+	margin: 0 20px 10px 20px
+}
+
+.topNav .L3 .brandHot ul {
+	float: left;
+	width: 942px;
+	border-right: 1px solid #eee;
+	padding: 0px 20px
+}
+
+.topNav .L3 .brandHot li {
+	width: 152px;
+	height: 70px;
+	margin: 2px 5px 3px 0
+}
+
+.topNav .L3 .brandHot li img {
+	border: 1px solid #eee;
+	width: 150px;
+	height: 68px
+}
+
+.topNav .liSkin .sort {
+	height: 458px
+}
+
+.topNav .liHair .sort {
+	height: 178px
+}
+
+.topNav .liBody .sort {
+	height: 412px
+}
+
+.topNav .liTool .sort {
+	height: 380px
+}
+
+.topNav .liMan .sort {
+	height: 396px
+}
+
+.topNav .brandAb .sort {
+	height: 390px
+}
+
+.topNav .brandCd .sort {
+	height: 475px
+}
+
+.topNav .brandEh .sort {
+	height: 460px
+}
+
+.topNav .brandIl .sort {
+	height: 428px
+}
+
+.topNav .brandMp .sort {
+	height: 445px
+}
+
+.topNav .brandQt .sort {
+	height: 389px
+}
+
+.topNav .brandUz .sort {
+	height: 255px
+}
+
+.topNav .liMakeup .sort {
+	height: 400px
+}
+
+.topNav .liPerfume .sort {
+	height: 200px
+}
+
+.topNav .liPerfume .hotimg,.topNav .liMakeup .hotimg {
+	margin: 11px auto
+}
+
+.topNav .liSkin .hotimg {
+	margin: 25px auto
+}
+
+.topNav .liBody .hotimg {
+	margin: 14px auto
+}
+
+.topNav .liTool .hotimg {
+	margin: 5px  auto
+}
+
+.topNav .liMan .hotimg {
+	margin: 10px auto
+}
+
+.topNav .brandHot .hotimg {
+	margin: 4px  auto
+}
+
+.topNav .brandAb .hotimg {
+	margin: 8px  auto
+}
+
+.topNav .brandCd .hotimg {
+	margin: 28px  auto
+}
+
+.topNav .brandEh .hotimg {
+	margin: 25px  auto
+}
+
+.topNav .brandIl .hotimg {
+	margin: 18px  auto
+}
+
+.topNav .brandMp .hotimg {
+	margin: 22px  auto
+}
+
+.topNav .brandQt .hotimg {
+	margin: 8px  auto
+}
+
+.topNav .brandUz .hotimg {
+	margin: 36px  auto
+}
+
+.topNav .L2 .sort-man img,.topNav .liGift .sort img,.topNav .L2 .sort-man .hotimg,.topNav .liGift .sort .hotimg {
+	height: 365px
+}
+
+.topNav .L2 .sort-man {
+	margin-left: 0px;
+	width: 194px
+}
+
+.topNav .liPerfume .sort:last-child {
+	width: 392px
+}
+
+.topNav .liGift .sort {
+	margin-left: 0px;
+	text-align: center;
+	height: 414px;
+	width: 194px
+}
+
+.topNav .liAll .brandAb,.topNav .liAll .brandCd,.topNav .liAll .brandEh,.topNav .liAll .brandIl,.topNav .liAll .brandMp,.topNav .liAll .brandQt,.topNav .liAll .brandUz {
+	display: none
+}
+
+.navDelay .liAll {
+	background: #ea1c50
+}

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mvc="http://www.springframework.org/schema/mvc" 
+	   xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context" 
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop 
+        http://www.springframework.org/schema/aop/spring-aop.xsd
+		http://www.springframework.org/schema/mvc 
+		http://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context.xsd">
+	<!-- 全局context类配置 -->
+	<mvc:default-servlet-handler />
+	<!-- 激活自动代理功能 -->
+	<aop:aspectj-autoproxy proxy-target-class="true" />
+	<!-- 启动注解扫描 -->
+	<mvc:annotation-driven />
+	
+	
+	<context:component-scan base-package="cn.IBeauty"></context:component-scan>
+	<!-- start视图配置 -->
+        <bean id="freemarkerConfig" class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
+            <property name="templateLoaderPath" value="/views/"/>
+            <property name="freemarkerVariables">
+                <map>
+                    <entry key="xml_escape" value-ref="fmXmlEscape"/>
+                </map>
+            </property>
+        </bean>
+        <bean id="fmXmlEscape" class="freemarker.template.utility.XmlEscape"/>
+        <bean id="viewResolver" class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">
+            <property name="cache" value="true" />
+            <property name="prefix" value="" />
+            <property name="suffix" value=".jsp" />
+            <property name="contentType" value="text/html;charset=UTF-8"></property>
+            <property name="requestContextAttribute" value="request" />
+            <property name="exposeSpringMacroHelpers" value="true" />
+            <property name="exposeRequestAttributes" value="true" />
+            <property name="exposeSessionAttributes" value="true" />
+        </bean>
+    <!--jsp视图解析器 -->
+    <bean id="internalResourceViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/" />
+        <property name="suffix" value=".jsp" />
+        <property name="viewClass" value="org.springframework.web.servlet.view.JstlView" />
+        <property name="order" value="1" />
+    </bean>
+        <!-- end视图配置 -->
+	<!-- 全局context类配置 -->
+</beans>

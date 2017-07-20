@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	 xmlns:aop="http://www.springframework.org/schema/aop"
+	 xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop 
+        http://www.springframework.org/schema/aop/spring-aop.xsd
+		http://www.springframework.org/schema/tx  
+        http://www.springframework.org/schema/tx/spring-tx.xsd">
+	    <!-- 阿里 druid 数据库连接池 -->
+        <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource"
+              init-method="init" destroy-method="close">
+            <property name="driverClassName" value="com.mysql.jdbc.Driver" />
+            <property name="url" value="jdbc:mysql://localhost:3306/ibeauty?useUnicode=true&amp;characterEncoding=utf8" />
+            <property name="username" value="root" />
+            <property name="password" value="root"/>
+            <!-- 配置初始化大小、最小、最大 -->
+            <property name="initialSize" value="1" />
+            <property name="minIdle" value="1" />
+            <property name="maxActive" value="10" />
+
+            <!-- 配置获取连接等待超时的时间 -->
+            <property name="maxWait" value="10000" />
+
+            <!-- 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒 -->
+            <property name="timeBetweenEvictionRunsMillis" value="60000" />
+
+            <!-- 配置一个连接在池中最小生存的时间，单位是毫秒 -->
+            <property name="minEvictableIdleTimeMillis" value="300000" />
+
+            <property name="testWhileIdle" value="true" />
+
+            <!-- 这里建议配置为TRUE，防止取到的连接不可用 -->
+            <property name="testOnBorrow" value="true" />
+            <property name="testOnReturn" value="false" />
+
+            <!-- 打开PSCache，并且指定每个连接上PSCache的大小 -->
+            <property name="poolPreparedStatements" value="true" />
+            <property name="maxPoolPreparedStatementPerConnectionSize"
+                      value="20" />
+
+            <!-- 这里配置提交方式，默认就是TRUE，可以不用配置 -->
+
+            <property name="defaultAutoCommit" value="true" />
+
+            <!-- 验证连接有效与否的SQL，不同的数据配置不同 -->
+            <property name="validationQuery" value="select 1 " />
+            <property name="filters" value="stat" />
+        </bean>
+	<!-- spring管理事务 -->
+	<bean id="txManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	<!-- Spring的声明式事务管理 -->
+	<!-- 设置与事务有关的各种属性 -->
+	<tx:advice id="txAdvice" transaction-manager="txManager">
+		<tx:attributes>
+			<tx:method name="insert*" propagation="REQUIRED"
+				rollback-for="Exception" />
+			<tx:method name="add*" propagation="REQUIRED" rollback-for="Exception" />
+			<tx:method name="update*" propagation="REQUIRED"
+				rollback-for="Exception" />
+			<tx:method name="del*" propagation="REQUIRED" rollback-for="Exception" />
+			<tx:method name="*" read-only="false" />
+		</tx:attributes>
+	</tx:advice>
+
+	<!-- 声明切入点 -->
+	<aop:config>
+		<aop:pointcut id="txPointCuts"
+			expression="execution(* cn.IBeauty.dao.*.*(..))" />
+		<aop:advisor advice-ref="txAdvice" pointcut-ref="txPointCuts" />
+	</aop:config>
+</beans>

@@ -1,0 +1,250 @@
+@CHARSET "UTF-8";
+body {
+   
+        font-family: Helvetica, 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', Arial, sans-serif;
+}
+.head{
+	height:250px;
+}
+.wrap1{
+	width:100%;
+	height:600px;
+	margin:0px;
+}
+.com{
+	width:900px;
+	height:600px;
+    vertical-align: inherit;
+    margin-left:300px;
+}
+.com from{
+	width:900px;
+	height:600px;
+}
+.com1{
+	    background: #fff !important;
+    border: solid 1px #f3f3f3 !important;
+    positive:relative;
+    height:600px;
+    width:1000px;
+    margin-left:200px;
+    margin-top:20px;
+    
+}
+.title{
+    color: #4a4439;
+    line-height: 45px;
+    height: 45px;
+    border-bottom: 2px solid #d8d8d8;
+    margin: 0 22px;
+}
+.com2{
+	    padding: 28px 25px 0 25px;
+	    height:550px;
+}
+.top{
+	line-height: 40px;
+    height: 40px;
+    overflow: hidden;
+    background: #f6f6f6 !important;
+}
+.top h4{
+	padding-left:25px;
+}
+.center{
+	margin:8px 0px 0px 0px;
+	height:500px;
+}
+.tab{
+	width:100%;
+	height:400px;
+}
+.sub{
+	height:100px;
+	margin:20px 0px 0px 250px;
+	position:relative;
+}
+
+#row1{
+	height:40px;
+}
+#row2{
+	height:100px;
+	
+}
+.item{
+	height:20px;
+	margin:5px 0px 5px 0px;
+}
+.item label{
+	vertical-align: middle;
+}
+.item input{
+	margin-right:5px;
+	font: 12px/1.5 tahoma,arial,'Hiragino Sans GB',\5b8b\4f53,sans-serif;
+}
+.rate-msg-handle {
+    float: right;
+}
+.butt{
+	color: #36c;
+    background-color: transparent;
+    margin: 0em;
+    font: 13.3333px Arial;
+    text-rendering: auto;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    cursor: pointer;
+}
+.tb-rate-ico-bg {
+    line-height: 18px;
+    padding-left: 24px;
+    background-position: 0 -300px;
+    background: transparent url(//img.alicdn.com/tps/TB1WgeNIVXXXXb5XXXXXXXXXXXX.png) no-repeat 1000px 1000px;
+}
+.rate-msg-box .textinput {
+    padding: 8px;
+    border: 1px solid #ABADB3;
+}
+.rate-msg-box .ph-label {
+    width: 400px;
+    line-height: 1.5;
+    display: block;
+}
+.ph-label {
+    margin-top: -3px;
+    position: absolute;
+    padding: 0;
+    line-height: 1.2;
+    color: #999;
+    opacity: 1;
+
+    transition: all .2s ease-out;
+}
+.rate-msg-box .rate-msg {
+    width: 100%;
+    _width: 434px;
+    height: 232px;
+    border: 0;
+    outline: 0;
+    resize: none;
+    font: 12px/1.5 tahoma,arial,'Hiragino Sans GB',\5b8b\4f53,sans-serif;
+}
+.rate-msg-box .text-counter strong {
+    color: #F60;
+    margin: 0 5px;
+    font-weight: bold;
+}
+.rate-msg-box .ft {
+    position: relative;
+    padding: 2px;
+}
+.rate-msg-box .close-msg-box {
+    cursor: pointer;
+    display: inline-block;
+    width: 70px;
+    height: 18px;
+    text-indent: -9999px;
+    border: none;
+    background: url(//assets.alicdn.com/app/rc/img/icon.png) no-repeat 0 -243px;
+}
+.rate-msg-box .rate-msg-option {
+    float: right;
+}
+.rate-msg-box .rate-msg-option li {
+    float: left;
+    margin-right: 5px;
+}
+.privacy-control {
+    padding: 2px;
+}
+select[disabled] > option {
+    color: graytext;
+}
+option {
+    font-weight: normal;
+    display: block;
+    padding: 0px 2px 1px;
+    white-space: pre;
+    min-height: 1.2em;
+}
+label {
+    cursor: default;
+}
+.item img{
+	margin-right:8px;
+}
+#row1 td{
+	color:#d91966;
+	font-weight:bold;
+}
+#l1{
+	width:120px;
+	text-align:center;
+}
+#l2{
+	width:250px;
+	text-align:center;
+	
+}
+.ll2{
+	margin:-100px 10px 0px 3px;
+	font-weight:bold;
+}
+.tit{
+	position:relative;
+	float:left;
+	margin-right:10px;
+	font-weight:bold;
+}
+.tit2{
+	position:relative;
+	float:left;
+}
+.tit2 img{
+	margin-right:5px;
+}
+#l1 img{
+	width:100px;
+	height:100px;
+	margin-top:-120px;
+}
+#tijiao{
+	position:relative;
+	float:left;
+	display:block;
+}
+#xianshi{
+	position:relative;
+	float:left;
+	margin:10px 0px 0px 20px;
+	
+	font-weight:bold;
+	display:block;
+}
+#chakan{
+	position:relative;
+	float:left;
+	display:none;
+	margin:10px 0px 0px 20px;
+	
+}
+#xianshi{
+	font-size:20px;
+	color:#372718;
+	font-weight:bold;
+}
+#chakan a{
+	color:#A8A3A9;
+	font-size:22px;
+	font-weight:bold;
+}
+#chakan a:hover{
+	color:#d91966;
+}

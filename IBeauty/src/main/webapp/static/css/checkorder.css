@@ -1,0 +1,321 @@
+body {    
+        color: #393939;
+        font-family: "Myriad Pro",Arial,FZLanTingHei-R-GBK,"方正兰亭黑","Microsoft YaHei","微软雅黑",STHeiti,"华文黑体",SimSun,"宋体",sans-serif;
+    }
+    a{
+        text-decoration: none;
+    }
+    a:link {color: #333}/* 未访问的链接 */
+    a:visited{color:#333}/* 已访问的链接 */
+    a:hover {color:#F24B3B}/* 鼠标移动到链接上 */
+    a:active {color: #0000FF}/* 选定的链接 */
+    ul{
+        display: block;
+    }
+    ul li{
+        float:left;
+    }
+    .main{
+        background-color:white;
+        margin-bottom: 30px;
+    }
+    div{
+        display:block;
+    }
+    .head{
+        height: 250px;
+    }
+    .wrapper {
+        padding: 0 .75rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    .herder-1{
+        display: block;
+        padding: 19px 0 14px;
+        border:1px solid none;
+    }
+    .step {
+        margin-bottom: 20px;
+        display: block;
+        height:80px;
+        width: 3000px;
+    }  
+    .step li{
+        display: inline-block;
+        width: 400px;
+        text-align: center;
+        padding: 26px 0 30px;   
+        color: #ccc; 
+        font-size:1.25rem;
+    }
+    .header{
+        border:1px solid none;
+        background-color: none;
+    }   
+    .footer{
+        background:none;
+        background-color: none;
+    }
+    .menu1{
+        margin-top:30px;
+    }
+    body, figure, h1, h2, h3, h4, h5, h6, p {
+        margin: 0px;
+    }
+    h5{
+        font-weight:bold;
+    }   
+    .one{
+        background-color:#f7f7f7;;
+        border-right:inset;
+        border-bottom:4px solid orange ;
+    }
+    .two{
+        background-color:none;
+        border-right:inset;
+        border-bottom:4px solid white ;
+        background: #f7f7f7;
+    }
+    .three{
+        background-color: none;
+        background: #f7f7f7;
+        border-bottom:4px solid white ;
+    }
+    ul{
+        list-style:none;
+        padding:0px;
+    }
+    .check-box-label {
+        margin: 0 20px 0 0;
+        display: inline-block;
+    }
+    .box{
+        width:20px;
+        height:20px;   
+    }
+    .main-table{
+        background-color:#F9F9F9 ;
+        margin-top:20px;
+        border:1px solid none;
+    } 
+    .table{
+            
+    }
+    .amount{
+        border:2px solid lightgrey;
+        border-radius:10px;
+        width:60px;
+        height:30px;
+        text-align: center;
+    }
+    td{
+        text-align:center;
+        font-size: large;
+        vertical-align: top;    
+    }
+    #row1 td{
+        border-bottom:10px solid whitesmoke;
+    }
+    .c1{
+        width:50px;
+        text-align:right;
+    }
+    .c2{
+        width:50px;
+        text-align: left;
+    }
+    .c3{
+        width:250px;
+        text-align:center ;
+    }
+    .c4{
+        width:160px;
+    }
+
+    .c5{
+        width:220px;
+    }
+    .c6{
+        width:220px;
+    }
+    #row1{
+        height:50px;
+        vertical-align: middle;
+        background-color:#EEEEEE;    
+    }
+    #row2{
+        background-color:whitesmoke;
+    }
+
+    .the2,.the3{   
+        float:left;
+        line-height:4;
+    }
+    .the2{
+        margin-left:200px;
+        font-size: larger;
+    }
+    .the3{   
+        margin-left:20px;
+        font-size: larger;
+    }
+    .the1{     
+        font-size:15px ;
+        float:right;
+        position: relative;
+        top: 10px;
+        
+    }
+    .the1-1{
+        width:1200px;
+        height:30px;
+    }
+    .the4-1{
+        width:1200px;
+        height:50px;
+    }
+    .the4{        
+        font-size: larger;
+        position: relative;
+        top: 20px;
+        float:right;
+    }
+    .button{
+        background-color:#E73674;
+        color:black;
+        width:120px;
+        height:50px;
+        border:1px solid none;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .jiesuan{   
+        border:1px solid lightgrey;
+        height:75px;
+        background-color:#EEEEEE;
+        width: 1200px;
+    }
+    .foot{
+        position: relative;
+        top: 520px;
+    }
+    
+    
+/* 封锁页面操作 */
+    .confirm-pop {
+    margin-top:230px;
+    display:none;
+    background: rgba(0,0,0,.2);
+    height: 55%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+   }
+   .confirm-pop .confirm h4 {
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    background-color: #f8f8f8;
+    }
+    .confirm-pop .confirm p:nth-child(2) {
+    font-size: 14px;
+    margin-top: 26px;
+    color: #333;
+    }
+    .confirm-pop .confirm p {
+    font-size:12px;
+    color: #666;
+    text-align: center;
+    }
+    .confirm-pop .confirm p:nth-child(2) span {
+    display: block;
+    margin-top: 12px;
+    font-size: 12px;
+    color: #666;
+    }
+   .confirm-pop .confirm {
+    background-color: #fff;
+    width: 400px;
+    height: 220px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -100px 0 0 -200px;
+    }
+    .confirm-pop .confirm .confirm-btns {
+    text-align: center;
+    margin: 25px 0 18px;
+    }
+   .confirm-pop .confirm .confirm-btns button:first-child {
+    background-color: #27c8e8;
+    color: #fff;
+   }
+   .confirm-pop .confirm .confirm-btns button {
+    width: 130px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 4px;
+    vertical-align: top;
+    border: 0;
+    position: relative;
+    font-size: 14px;
+    margin: 0 20px;
+    overflow: hidden;
+    z-index: 2;
+    }
+    .confirm-pop .confirm .confirm-btns button:last-child {
+    background-color: #fff;
+    box-shadow: 0 0 0 1px #ccc;
+    color: #666;
+    }
+    .confirm-pop .confirm .confirm-btns button:first-child:before {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate3d(-50%,-50%,0) scale3d(0,0,0);
+    transform: translate3d(-50%,-50%,0) scale3d(0,0,0);
+    height: 130px;
+    width: 130px;
+    background-color: #23b8d6;
+    content: '';
+    border-radius: 100%;
+    }
+    .confirm-pop .confirm .confirm-btns button:first-child:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    content: attr(ta);
+    z-index: 2;
+    }
+    .confirm-pop .confirm .confirm-btns button:last-child:before {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate3d(-50%,-50%,0) scale3d(0,0,0);
+    transform: translate3d(-50%,-50%,0) scale3d(0,0,0);
+    height: 130px;
+    width: 130px;
+    background-color: #f1f1f1;
+    content: '';
+    border-radius: 100%;
+    }
+    .confirm-pop .confirm .confirm-btns button:last-child:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    content: attr(ta);
+    z-index: 2;
+    }
+    .confirm-pop .confirm p:nth-child(4) span {
+    color: #00a9f1;
+    margin: 0 5px;
+    }

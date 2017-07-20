@@ -1,0 +1,56 @@
+.common_wrapper, .wrap {
+    width: 1186px;
+    margin: 0 auto;
+    }
+a{
+    text-decoration:none;   
+}
+.com_right{
+	width:1500px;
+	margin-top:30px;
+	font-size: 20px;
+	font-family: 宋体;
+}
+.com_left{
+
+}
+
+a:link {color: #333}/* 未访问的链接 */
+a:visited{color:#333}/* 已访问的链接 */
+a:hover {color:#F24B3B}/* 鼠标移动到链接上 */
+a:active {color: #0000FF}/* 选定的链接 */
+.head{
+	height: 250px
+}
+.right .tdd{
+	margin-top:10px;
+	padding-top:20px;
+	height:100px;
+}
+
+.right .tdd a{
+	margin-left:-20px;
+	color:#AB9FA8;
+}
+.right .tr2{
+	height:120px;
+	
+}
+.right .tr3{
+	height:60px;
+	
+}
+.account-content{
+	margin-top:-50px;
+}
+.right .tdd a:hover{
+	color:#F24B3B;
+}
+.right #doc button{
+	height:30px;
+}
+#localImag img{
+	vertical-align: middle;
+	    border-radius: 60px;
+	margin-left:20px;
+}

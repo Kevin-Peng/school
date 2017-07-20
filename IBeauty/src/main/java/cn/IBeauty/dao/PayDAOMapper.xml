@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.IBeauty.dao.PayDAO">
+<select id="findOrderById" resultType="cn.IBeauty.po.Order" parameterType="int">
+	select * from myorder where id = #{order_id}
+</select>
+
+<select id="findPayByEmail" resultType="cn.IBeauty.po.Pay">
+	select * from pay where email=#{email}
+</select>
+
+<select id="findPayById" resultType="cn.IBeauty.po.Pay">
+	select * from pay where user_id=#{user_id}
+</select>
+
+<select id="findUseraccountById" resultType="cn.IBeauty.po.Pay">
+	select * from pay where user_id=#{user_id}
+</select>
+
+<select id="findPlataccountById" resultType="cn.IBeauty.po.Platformpay">
+	select * from platformpay where id=#{Plat_id}
+</select>
+
+<update id="updateUseraccountById">
+	update pay set account=#{account} where user_id=#{user_id}
+</update>
+
+<update id="updatePlataccountById">
+	update platformpay set account=#{account} where id=#{plat_id}
+</update>
+
+<update id="updatestatus">
+	update myorder set status=1 where id=#{order_id}
+</update>
+
+<update id="updateordertablestatus">
+	update ordertable set status=1 where order_id=#{order_id}
+</update>
+
+<update id="updatepaypwd">
+	update pay set pay_pwd=#{pay_pwd} where user_id=#{user_id}
+</update>
+
+<insert id="insertpay">
+	insert into pay(email,user_id) values(#{email},#{user_id})
+</insert>
+
+<select id="finditemById" resultType="cn.IBeauty.po.myOrder">
+	select product_id from ordertable where order_id=#{order_id}
+</select>
+
+</mapper>
